@@ -1,6 +1,5 @@
 package org.ono.test;
 
-import org.ono.listener.WatchFilePathTask;
 import org.ono.services.impl.Files;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -15,9 +14,5 @@ public class TestDemo {
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         Files files = (Files) ac.getBean("files");
         System.out.println(files.toString());
-
-        WatchFilePathTask watchFilePathTask = new WatchFilePathTask();
-        watchFilePathTask.start();
-        System.out.println("ImportFileFromFileTask is started!");
     }
 }
